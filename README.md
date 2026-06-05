@@ -139,7 +139,7 @@ Based on the analysis:
 FedEx_EDA.ipynb      -> Complete analysis notebook
 README.md            -> Project overview
 dataset.csv          -> Dataset used
-images/              -> Charts/screenshots
+
 ```
 
 ---
