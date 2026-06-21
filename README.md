@@ -163,9 +163,8 @@ This analysis identified critical logistics inefficiencies and data quality issu
 ```text
 ├── Data/
 ├── Notebooks/
-├── Images/
 ├── README.md
-└── Requirements.txt
+
 ```
 
 ---
