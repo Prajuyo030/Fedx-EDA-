@@ -1,154 +1,174 @@
-# Supply Chain Management System Performance Analysis
+# 📦 FedEx Logistics Performance Analysis
 
-## About the project
+## Project Overview
 
-This project focuses on analysing logistics and shipment data from FedEx to understand delivery performance, shipment delays, freight costs, and vendor efficiency.
-
-The main goal was to explore the data, identify patterns affecting logistics operations, and suggest improvements that could help reduce delays and optimise costs.
+This project analyses FedEx logistics shipment data to identify delivery delays, freight cost inefficiencies, and supply chain performance gaps. Using Exploratory Data Analysis (EDA), the project uncovers operational bottlenecks and provides data-driven recommendations to improve delivery reliability, reduce logistics costs, and enhance supply chain transparency.
 
 ---
 
-## Problem Statement
+## Business Problem
 
-FedEx manages shipments across different countries, vendors, and transportation methods. Delays in deliveries, high freight costs, and incomplete shipment records can affect overall supply chain performance.
+FedEx manages thousands of global shipments across multiple countries, vendors, and transportation modes. Delays, incomplete shipment records, and rising freight costs can negatively impact customer satisfaction and operational efficiency.
 
-Using Exploratory Data Analysis (EDA), this project tries to answer questions such as:
+The goal of this analysis was to:
 
-- Which shipment modes have higher delays?
-- Do certain vendors perform better than others?
-- How does freight cost vary?
-- Which countries experience longer lead times?
-- What factors affect on-time delivery?
+* Improve on-time delivery performance
+* Reduce freight costs
+* Identify shipment delay patterns
+* Enhance supply chain visibility through better data quality
 
 ---
 
 ## Dataset Information
 
-Dataset contains around 10k+ shipment records with information including:
+* **Records:** 10,324 shipments
+* **Features:** 33 columns
+* **Domain:** Global Logistics & Supply Chain
+* **Data Includes:**
 
-- Country
-- Vendor
-- Shipment mode
-- Delivery dates
-- Freight cost
-- Product details
-- Weight
-- Insurance cost
-- Line item value
-
----
-
-## Libraries Used
-
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-```
-
-Other tools:
-
-- Google Colab
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+  * Shipment details
+  * Delivery timelines
+  * Freight costs
+  * Vendor information
+  * Country-level shipment records
+  * Transportation modes
 
 ---
 
-## Data Cleaning & Feature Engineering
+## Tools & Technologies
 
-Some preprocessing steps done before analysis:
-
-- Checked duplicate records
-- Handled missing values
-- Converted date columns into datetime format
-- Converted numeric columns
-- Created new columns such as:
-
-`delivery_delay_days`
-
-`Lead_Time`
-
-`On_Time`
-
-`total_logistics_cost`
-
-These helped in understanding shipment performance better.
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Jupyter Notebook
 
 ---
 
-## Analysis Performed
+## Data Cleaning & Preparation
 
-The project includes:
+Key preprocessing steps:
 
-### Univariate Analysis
-Understanding distribution of individual variables
+* Converted date columns into datetime format
+* Cleaned freight cost and weight fields
+* Handled missing values
+* Removed invalid shipment records
+* Created new analytical features:
 
-Examples:
-- Delay distribution
-- Freight cost distribution
-- Missing values
+### Engineered Features
 
-### Bivariate Analysis
-Relationship between two variables
-
-Examples:
-- Weight vs Freight cost
-- Vendor vs Delivery delay
-- Shipment mode vs Cost
-
-### Multivariate Analysis
-
-Examples:
-- Country + Shipment mode + Delay
-- Vendor + Lead time + On-time delivery
+* Delivery Delay Days
+* Lead Time
+* On-Time Delivery Flag
+* Total Logistics Cost
+* Monthly Delivery Trend
+* Delay Indicators
 
 ---
 
-## Key Findings
+## Key Performance Indicators (KPIs)
 
-Some observations from analysis:
-
-- Overall on-time delivery rate was around **87%**
-- Average lead time was approximately **109 days**
-- Ocean shipment had higher delays
-- Air shipment was more expensive but comparatively reliable
-- Missing shipment records affected tracking quality
-- Some vendors consistently performed better than others
-
----
-
-## Suggestions
-
-Based on the analysis:
-
-- Improve the shipment documentation process
-- Standardise freight cost recording
-- Review underperforming vendors
-- Optimise shipment mode depending on urgency and cost
-- Track delays continuously using dashboards
+| KPI                          | Value    |
+| ---------------------------- | -------- |
+| Total Shipments Analyzed     | 10,324   |
+| Cleaned Records Used         | 8,279    |
+| On-Time Delivery Rate        | 87.09%   |
+| Average Lead Time            | 109 Days |
+| Average Freight Cost         | $10,749  |
+| Missing PO Date Records      | 5,225    |
+| Missing Freight Cost Records | 3,632    |
 
 ---
 
-## Files
+## Key Insights
+
+### Delivery Performance
+
+* Overall on-time delivery rate is **87.09%**
+* Air shipments achieved the highest delivery reliability
+* Ocean shipments experienced the longest lead times
+* Nigeria, Uganda, and Mozambique showed the highest delivery delays
+
+### Freight Cost Analysis
+
+* Air Charter is the most expensive shipment mode
+* Heavy reliance on Air transport increases operational costs
+* Several shipments showed disproportionately high freight expenses
+
+### Data Quality Findings
+
+* 63% of records were missing PO Sent Date information
+* Freight cost data was unavailable for nearly 44% of shipments
+* Lead time anomalies revealed data entry issues
+
+---
+
+## Business Recommendations
+
+### Delivery Optimisation
+
+* Improve shipment planning for high-delay regions
+* Monitor vendor performance through SLA tracking
+* Reduce delivery bottlenecks in critical corridors
+
+### Cost Optimisation
+
+* Shift non-urgent shipments to lower-cost transportation modes
+* Limit Air Charter usage to emergency shipments
+* Improve freight cost tracking and reporting
+
+### Data Governance
+
+* Enforce mandatory PO date capture
+* Standardise freight cost recording
+* Implement automated validation checks for shipment records
+
+---
+
+## Visualisations Included
+
+* Delivery Delay Distribution
+* Shipment Mode Analysis
+* Freight Cost Distribution
+* Vendor Performance Analysis
+* Country-wise Delay Analysis
+* Delivery Trend Analysis
+* Correlation Analysis
+* Heatmaps and Multivariate Visualisations
+
+---
+
+## Skills Demonstrated
+
+* Exploratory Data Analysis (EDA)
+* Data Cleaning & Wrangling
+* Feature Engineering
+* Business Problem Solving
+* Data Visualisation
+* KPI Development
+* Logistics & Supply Chain Analytics
+* Insight Generation & Business Recommendations
+
+---
+
+## Project Outcome
+
+This analysis identified critical logistics inefficiencies and data quality issues impacting FedEx operations. The findings provide actionable recommendations to improve delivery performance, reduce transportation costs, and increase supply chain visibility through better operational tracking.
+
+---
+
+### Repository Structure
 
 ```text
-FedEx_EDA.ipynb      -> Complete analysis notebook
-README.md            -> Project overview
-dataset.csv          -> Dataset used
-
+├── Data/
+├── Notebooks/
+├── Images/
+├── README.md
+└── Requirements.txt
 ```
 
 ---
 
-## Conclusion
-
-This project helped me practice data cleaning, feature engineering, visualisation, and extracting business insights from logistics data.
-
-The focus was not only on creating charts but also on understanding what those insights mean from a business perspective.
-
----
-
+**Author:** Prajwal N
+**Role:** Aspiring Data Analyst | Data Science & AI Learner
